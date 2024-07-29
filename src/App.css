@@ -34,3 +34,19 @@
 p{
   font-weight:bold;
 }
+.score-container{
+  position: fixed;
+  top: 0;
+  right: 50px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.score-title{
+  text-decoration: underline;
+  margin-bottom: 0;
+}
+.score-number{
+  margin-top: 0;
+  font-size: 2rem;
+  color: red;
+}
