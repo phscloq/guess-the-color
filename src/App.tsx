@@ -30,12 +30,18 @@ function App() {
       const newScore = score;
       setColor(rightColor);
       setAnswers([rightColor, getColor(), getColor()].sort(() => Math.random() - 0.5));
-      setStatement('Correct!');
       setScore(newScore+1);
+      setStatement('Correct!');
+      setTimeout(()=>{
+        setStatement('');
+      }, 1000);
   }
   else{
       setScore(0);
       setStatement('Wrong!');
+      setTimeout(()=>{
+        setStatement('');
+      }, 1000);
   }
   }
   
@@ -52,12 +58,17 @@ function App() {
                 return <button className='answer' onClick={handleClick}>{answer}</button>
               })}
             </div>
-            <p className={`${statement== 'Correct!' ? 'correct-text': 'wrong-text'}`}>{statement}</p>
+            
+            <div className='score-container'>
+              <h2 className='score-title'>Score</h2>
+              <p className='score-number'>{score}</p>
+            </div>
+
+            <div className='statement-container'>
+              <p className={`${statement== 'Correct!' ? 'correct-text': 'wrong-text'}`}>{statement}</p>
+            </div>
         </div>
-        <div className='score-container'>
-          <h2 className='score-title'>Score</h2>
-          <p className='score-number'>{score}</p>
-        </div>
+        
       </div>
 
     </>
