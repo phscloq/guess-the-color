@@ -17,6 +17,9 @@
   height: 200px;
   margin-bottom: 2rem;
 }
+button{
+  outline:none !important;
+}
 .options{
   display: flex;
   justify-content: space-between;
@@ -55,7 +58,6 @@ p{
 .score-number{
   margin: 0;
   font-size: 2rem;
-  color: white;
   height: min-content;
 }
 
