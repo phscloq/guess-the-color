@@ -1,8 +1,12 @@
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .App{
@@ -72,4 +76,9 @@ p{
   }
  
   
+}
+@media (prefers-color-scheme: dark){
+  #root{
+    background-color:rgb(48, 48, 48);
+  }
 }
